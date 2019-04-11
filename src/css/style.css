@@ -12,8 +12,36 @@ body{
 }
 
 .main{
-    width: 1200px;
-    height: 500px;
+    width: 900px;
+    height: 360px;
     margin: 30px auto;
     overflow: hidden;
+}
+
+.banner{
+    width: 900px;
+    height: 360px;
+    overflow: hidden;
+    position: relative;
+  
+}
+
+.banner-slide{
+    width: 900px;
+    height: 360px;
+    position: absolute;
+    background-repeat: no-repeat;
+   
+}
+
+.slide1{
+    background-image: url("../img/one.png");
+}
+
+.slide2{
+    background-image: url("../img/two.png");
+}
+
+.slide3{
+    background-image: url("../img/three.png");
 }
