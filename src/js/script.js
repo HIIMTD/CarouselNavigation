@@ -27,9 +27,22 @@ function slideImg() {
             if (index >= len) {
                 index = 0;
             }
-            console.log(index);
+            
+            //switch imgs
+            changeImg();
         }, 3000);
     }
+    
+}
+
+//function switch img
+function changeImg() {
+    console.log(index);
+    //set other pics display to none
+    for (let i = 0; i< len; i++) {
+      imgs[i].style.display = 'none';
+    }
+    imgs[index].style.display = 'block';
     
 }
 

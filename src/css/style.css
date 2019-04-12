@@ -32,8 +32,12 @@ body{
     height: 360px;
     position: absolute;
     background-repeat: no-repeat;
-    /* display: none; */
+    display: none;
    
+}
+
+.slide-active{
+    display: block;
 }
 
 .slide1{
