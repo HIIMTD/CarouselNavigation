@@ -1,17 +1,17 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
-body{
+body {
     font-family: 'Courier New', Courier, monospace
 }
 
-.main{
+.main {
     width: 900px;
     height: 360px;
     margin: 30px auto;
@@ -19,84 +19,85 @@ body{
     position: relative;
 }
 
-.banner{
+.banner {
     width: 900px;
     height: 360px;
     overflow: hidden;
     position: relative;
-  
+
 }
 
-.banner-slide{
+.banner-slide {
     width: 900px;
     height: 360px;
     position: absolute;
     background-repeat: no-repeat;
     display: none;
-   
+
 }
 
-.slide-active{
+.slide-active {
     display: block;
 }
 
-.slide1{
+.slide1 {
     background-image: url("../img/one.png");
 }
 
-.slide2{
+.slide2 {
     background-image: url("../img/two.png");
 }
 
-.slide3{
+.slide3 {
     background-image: url("../img/three.png");
 }
 
 
-.button{
+.button {
     width: 50px;
     height: 50px;
     left: 200px;
     top: 50%;
     margin-top: -25px;
-    background: url(../img/arrow.png)  no-repeat center center;
+    background: url(../img/arrow.png) no-repeat center center;
     position: absolute;
 }
 
-.button:hover{
+.button:hover {
     background-color: grey;
     opacity: 0.8;
 }
 
-.prev{
+.prev {
     transform: rotate(180deg);
 }
-.next{
+
+.next {
     left: auto;
     right: 0;
-    
+
 }
 
-.dots{
+.dots {
     position: absolute;
     right: 10px;
     bottom: 24px;
     text-align: right;
 }
 
-.dots span{
+.dots span {
     display: inline-block;
     width: 12px;
     height: 12px;
-    background: rgba(7, 17,24, 0.4);
+    background: rgba(7, 17, 24, 0.4);
     box-shadow: 0 0 0 2px rgba(10, 226, 93, 0.541);
     border-radius: 50%;
     margin-left: 8px;
     cursor: pointer;
-   
+
 }
 
-.dots span.active{
-    box-shadow:  0 0 0 2px rgba(7, 17,24, 0.4);
-     background: black;
+.dots span.active {
+    box-shadow: 0 0 0 2px rgba(7, 17, 24, 0.4);
+    background: black;
 }

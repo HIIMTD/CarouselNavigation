@@ -1,6 +1,6 @@
 //rewrite function document.getElementById
-function byId(id){
-    if (typeof(id)==="string") {
+function byId(id) {
+    if (typeof (id) === "string") {
         return document.getElementById(id);
     } else {
         return id;
@@ -18,33 +18,33 @@ var next = byId("next");
 
 function slideImg() {
     var main = byId("main");
-    main.onmouseover = function(){
+    main.onmouseover = function () {
         if (timer) {
             clearInterval(timer);
         }
     }
 
-    main.onmouseout = function() {
-        timer = setInterval(function() {
+    main.onmouseout = function () {
+        timer = setInterval(function () {
             index++;
-           
+
             if (index >= len) {
                 index = 0;
             }
-            
+
             //switch imgs
             changeImg();
         }, 3000);
     }
     main.onmouseout();
-     //iterate all dots
+    //iterate all dots
     for (let i = 0; i < len; i++) {
         dots[i].id = i;
-        dots[i].onclick = function(){
+        dots[i].onclick = function () {
             // alert(this.id);
             //change index to current img
             index = this.id;
-            
+
             changeImg();
         }
     }
@@ -60,10 +60,10 @@ function slideImg() {
     }
 
     //previous img button
-    prev.onclick = function(){
+    prev.onclick = function () {
         index--;
-        if (index<0) {
-            index = len-1;
+        if (index < 0) {
+            index = len - 1;
         }
         changeImg();
     }
@@ -73,13 +73,13 @@ function slideImg() {
 function changeImg() {
     // console.log(index);
     //set other pics display to none
-    for (let i = 0; i< len; i++) {
-      imgs[i].style.display = 'none';
-      dots[i].className = "";
+    for (let i = 0; i < len; i++) {
+        imgs[i].style.display = 'none';
+        dots[i].className = "";
     }
     imgs[index].style.display = 'block';
     dots[index].className = "active";
-    
+
 }
 
 slideImg();
