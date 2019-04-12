@@ -101,3 +101,25 @@ body {
     box-shadow: 0 0 0 2px rgba(7, 17, 24, 0.4);
     background: black;
 }
+
+.menu-box{
+    width: 200px;
+    height: 360px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: grey;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+.menu-content{
+    width: 200px;
+    height: 354px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    /* background: green; */
+    padding-top: 60px;
+}
