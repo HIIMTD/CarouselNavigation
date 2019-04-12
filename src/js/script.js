@@ -11,7 +11,8 @@ var index = 0;
 var timer = null;
 var imgs = byId("banner").getElementsByTagName("div");
 var len = imgs.length;
-console.log(len);
+
+var dots = byId("dots").getElementsByTagName("span");
 
 
 function slideImg() {
@@ -34,7 +35,18 @@ function slideImg() {
             changeImg();
         }, 3000);
     }
-     main.onmouseout();
+    main.onmouseout();
+     //iterate all dots
+    for (let i = 0; i < len; i++) {
+        dots[i].id = i;
+        dots[i].onclick = function(){
+            // alert(this.id);
+            //change index to current img
+            index = this.id;
+            
+            changeImg();
+        }
+    }
 }
 
 //function switch img
@@ -43,8 +55,10 @@ function changeImg() {
     //set other pics display to none
     for (let i = 0; i< len; i++) {
       imgs[i].style.display = 'none';
+      dots[i].className = "";
     }
     imgs[index].style.display = 'block';
+    dots[index].className = "active";
     
 }
 
