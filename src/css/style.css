@@ -123,3 +123,25 @@ body {
     /* background: green; */
     padding-top: 60px;
 }
+
+a:link,a:visited{
+    text-decoration: none;
+}
+
+.menu-item{
+    height: 64px;
+    line-height: 60px;
+    font-size: 16px;
+    padding: 0 24px;
+}
+
+.menu-item a:link, .menu-item a:visited{
+    color:white;
+}
+
+.menu-item a{
+    display:block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding-left: 8px;
+
+}
