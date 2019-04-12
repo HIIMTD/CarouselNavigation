@@ -17,7 +17,9 @@ console.log(len);
 function slideImg() {
     var main = byId("main");
     main.onmouseover = function(){
-
+        if (timer) {
+            clearInterval(timer);
+        }
     }
 
     main.onmouseout = function() {
@@ -32,7 +34,7 @@ function slideImg() {
             changeImg();
         }, 3000);
     }
-    
+     main.onmouseout();
 }
 
 //function switch img
