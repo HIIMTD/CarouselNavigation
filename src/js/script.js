@@ -13,7 +13,8 @@ var imgs = byId("banner").getElementsByTagName("div");
 var len = imgs.length;
 
 var dots = byId("dots").getElementsByTagName("span");
-
+var prev = byId("prev");
+var next = byId("next");
 
 function slideImg() {
     var main = byId("main");
@@ -47,11 +48,30 @@ function slideImg() {
             changeImg();
         }
     }
+
+    //next img button
+    next.onclick = function () {
+        index++;
+        if (index >= len) {
+            index = 0;
+        }
+        console.log(index);
+        changeImg();
+    }
+
+    //previous img button
+    prev.onclick = function(){
+        index--;
+        if (index<0) {
+            index = len-1;
+        }
+        changeImg();
+    }
 }
 
 //function switch img
 function changeImg() {
-    console.log(index);
+    // console.log(index);
     //set other pics display to none
     for (let i = 0; i< len; i++) {
       imgs[i].style.display = 'none';
