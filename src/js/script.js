@@ -15,6 +15,10 @@ var len = imgs.length;
 var dots = byId("dots").getElementsByTagName("span");
 var prev = byId("prev");
 var next = byId("next");
+var menu = byId("menu-content");
+var menuItems = menu.getElementsByClassName("menu-item");
+var subMenu = byId("sub-menu");
+var innerBox = subMenu.getElementsByClassName("inner-box");
 
 function slideImg() {
     var main = byId("main");
@@ -66,6 +70,35 @@ function slideImg() {
             index = len - 1;
         }
         changeImg();
+    }
+
+    //menu and sub menu
+    for (let i = 0; i < menuItems.length; i++) {
+        menuItems[i].setAttribute("data-index",i);
+
+        menuItems[i].onmouseover = function() {
+            subMenu.className = "sub-menu";
+            var idx = this.getAttribute("data-index");
+            for (let j = 0; j < innerBox.length; j++) {
+                innerBox[j].style.display = "none";
+                menuItems[j].style.background = "none";
+            }
+            menuItems[idx].style.background = 'rgba(0,0,0,0.1)';
+            innerBox[idx].style.display = "block";
+        }
+        
+    }
+
+    menu.onmouseout = function () {
+        subMenu.className = "sub-menu hide";
+    }
+
+    subMenu.onmouseover = function(){
+        this.className = "sub-menu";
+    }
+
+    subMenu.onmouseout = function () {  
+        subMenu.className = "sub-menu hide";
     }
 }
 
